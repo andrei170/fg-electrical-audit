@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Pre-Call Diagnostic &middot; F&amp;G Electrical Ltd &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+/* display/padding/margin are declared explicitly so a page carrying its own bare
+   nav{} element rule (concept mockups do) cannot restyle the AG1 bar. */
+.agnav{display:block;padding:0;margin:0;position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="./" class="on">Pre-Call Diagnostic</a></div></nav>
+<style>
+:root{--bg:#f6f8fb !important;--panel:#fff !important;--ink:#10131a !important;--mut:#53627a !important;
+--line:#d7e0ea !important;--accent:#1f6feb !important;--soft:#eef3f9 !important;--slate:#33475b !important;
+--amber:#c7971a !important;--amber-d:#9c7510 !important;}
+html,body{background:#f6f8fb !important;color:#10131a !important}
+p,li,td,th,span,div,small{color:#1f2a38 !important}
+h1,h2,h3,h4,.h,.sec,.lab{color:#0b1016 !important}
+b,strong{color:#000 !important}a{color:#1458c4 !important}
+.wrap{max-width:1050px}
+header{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b) !important}
+header *{color:#fff !important}header .eyebrow{color:#8ec5ff !important;letter-spacing:1.4px}
+header .sub{color:#cfe0f5 !important}
+.warn,.flag,.win,.oppnote,.card{background:#fff !important;border:1px solid #d7e0ea !important;
+border-radius:10px;padding:18px 20px;margin-bottom:8px}
+.warn{border-left:5px solid #c7971a !important}.flag{border-left:5px solid #c0392b !important}
+.win{border-left:5px solid #157a52 !important}
+.oppnote{background:#eff5ff !important;border-left:5px solid #1f6feb !important}
+.warn *,.flag *,.win *,.oppnote *,.card *{color:#1f2a38 !important}
+.warn b,.flag b,.win b,.oppnote b,.card b{color:#000 !important}
+.lab{font-weight:800;font-size:16px;margin-bottom:8px;display:block}
+table{width:100%;border-collapse:collapse;background:#fff !important;
+border:1px solid #cfdae6 !important;margin-top:6px}
+table th,table td{border:1px solid #d7e0ea !important;padding:11px 13px;text-align:left;
+vertical-align:top;background:#fff !important;color:#1f2a38 !important}
+table th{background:#0b1016 !important;color:#fff !important;font-size:12px;letter-spacing:.9px;
+text-transform:uppercase;font-weight:700}
+table tr:nth-child(even) td{background:#f4f8fc !important}
+tr.you td{background:#fff6d9 !important}td.o{text-align:right;font-weight:800;color:#000 !important}
+.money{background:linear-gradient(135deg,#0a1f3d,#123a6b) !important;border:0 !important;
+border-radius:12px;padding:24px 26px}
+.money *{color:#e8f1fc !important}
+.money .fig{font-size:40px;font-weight:800;color:#8ec5ff !important;line-height:1.1}
+.money b{color:#fff !important}
+.cta{background:#0a1f3d !important;border-radius:12px;padding:34px 24px;margin-top:10px}
+.cta *{color:#fff !important}.cta p{color:#b7cfe8 !important}
+footer{border-top:1px solid #d7e0ea !important;margin-top:26px}
+footer *{color:#6b7b8f !important;background:transparent !important;font-size:11.5px;line-height:1.6}
+ul.road,ul.road2{list-style:none;padding-left:0}
+ul.road li,ul.road2 li{background:#fff !important;border:1px solid #d7e0ea !important;
+border-left:4px solid #1f6feb !important;border-radius:8px;padding:13px 16px;margin-bottom:9px}
+section{padding:24px 0}
+</style>
+<header><div class="wrap"><div class="eyebrow">Pre-Call Diagnostic &middot; F&amp;G Electrical Ltd</div>
+<h1>Twenty-Four Ways To Ring You, And Nothing Counting Who Does.</h1><div class="sub">Prepared for Jonathon Fitzpatrick &middot; Tuesday 6 October, 2pm &middot; AG1 Consulting</div></div></header>
+
+<section><div class="wrap"><div class="h">What You Told Our Team</div>
+<table><tr><th>&nbsp;</th><th>What you said</th></tr><tr class="you"><td><b>Testing work</b></td><td>20 to 25 a week, and you would happily take <b>double that or more</b></td></tr><tr class="you"><td><b>EV chargers</b></td><td>You do them, but the usual flow <b>feels like it is slowing</b></td></tr><tr><td><b>Team</b></td><td>3 employees on the books, normally 2 to 3 subcontractors as well</td></tr><tr><td><b>The call</b></td><td>First dial that connected, and you booked</td></tr></table>
+<div class="oppnote">⭐ <b>Two different asks in one sentence.</b> Doubling testing work is a volume problem. EV flow slowing is a <b>measurement</b> problem, because without tracking nobody can tell you whether it is actually slowing or just feels that way.</div></div></section>
+
+<section><div class="wrap"><div class="h">What We Found</div><div class="flag" style="margin-top:12px"><div class="lab">🔴🔴 You have no tracking of any kind</div><p>No Google Analytics, no Tag Manager, no advertising tag, no pixel. <b>Nothing.</b></p><p>⭐⭐ <b>Which is why the EV question cannot be answered.</b> You said the flow feels like it is slowing. <b>Nothing on your site can confirm or deny that</b>, so you are navigating on a feeling. It might be slowing, it might be seasonal, or it might be that fewer people are finding the page.</p><p>⛔ <b>This is the cheapest item on the page and everything else depends on it.</b></p></div><div class="flag" style="margin-top:12px"><div class="lab">⭐ What is unusual, and in your favour</div><p><b>Seven enquiry forms and twenty-four tap-to-call links across twenty pages.</b> ⭐⭐ <b>That is the best-converting setup of any site we have audited this week</b>, by a distance. Most trade sites have one form and two phone links.</p><p>🔴 <b>So you have built a site that is very good at turning readers into callers, and you have no idea how many it turns.</b> That is a frustrating place to be and it is entirely fixable.</p></div><div class="flag" style="margin-top:12px"><div class="lab">⚠️ There is a placeholder email still in the template</div><p>Your site publishes <b>name@example.com</b> alongside your real address. That is dummy text from whoever built it, left in.</p><p>⚠️ Harmless in itself. ⭐ <b>But it is the sort of thing that tells a careful commercial client nobody has looked at the site in a while</b>, and careful commercial clients are who buy testing work.</p></div><div class="flag" style="margin-top:12px"><div class="lab">⚠️ A Gmail address and a mobile, on a company with three employees</div><p>Your published contact is <b>fgelectricalni@gmail.com</b> and a mobile number. You own fgelectricalltd.co.uk.</p><p>⚠️ For domestic work that is fine. ⭐ <b>For the commercial and landlord testing contracts you want to double, it reads smaller than you are.</b></p></div><div class="flag" style="margin-top:12px"><div class="lab">⚠️ No local business details in the code</div><p>No address, postcode, opening hours or coordinates where search engines read them. For &ldquo;electrician near me&rdquo; and &ldquo;EICR near me&rdquo; that is a real gap, and it is an hour or two of work.</p></div></div></section>
+
+<section><div class="wrap"><div class="h">The Size Of What You Are Asking For</div><div class="money"><p style="margin-bottom:6px;opacity:.85">Doubling the testing work, on your own numbers</p><div class="fig">20&ndash;25 a week &rarr; 40&ndash;50 a week</div><p style="margin-top:12px">That is <b>another 20 to 25 tests a week</b>, or roughly <b>1,000 to 1,300 more a year</b>. ⚠️ We do not know what you charge for a test, so we are not going to guess at the revenue. <b>That number is the first thing we would ask for.</b></p></div><div class="oppnote" style="margin-top:14px">⚠️ <b>And the question underneath it: could you deliver fifty a week?</b> Three on the books and two or three subbies is a real team, but doubling testing volume is a scheduling job as much as a marketing one. ⭐ <b>If the answer is no, we would say so.</b></div></div></section>
+
+<section><div class="wrap"><div class="h">⭐ What Is Already Good</div><div class="win"><div class='lab'>⭐ Do not change these</div><p><b>NICEIC</b> shown on the site. <b>Twenty pages</b> covering EICR and fixed wire testing, EV charging, commercial work, a team page, a portfolio, reviews and insurance. <b>Seven forms and twenty-four tap-to-call links.</b></p><p>⭐⭐ <b>Somebody built this properly.</b> The conversion side is genuinely strong and we would not touch it. What is missing is the measurement around it and the small credibility details.</p></div></div></section>
+
+<section><div class="wrap"><div class="h">What We Would Want To Ask</div>
+<ul class="road road2"><li><b>1. What does a test actually earn you?</b> ⭐ The number we need before any of the rest means anything.</li><li><b>2. Where do the 20 to 25 come from now?</b> Landlords, agents, commercial contracts, word of mouth?</li><li><b>3. Could you physically do fifty a week?</b> With three on the books and two or three subbies.</li><li><b>4. On the EV side, what makes you think it is slowing?</b> Fewer enquiries, or fewer converting? ⚠️ They are different problems.</li><li><b>5. Have you ever run advertising?</b> There is no tag on the site, which usually means no.</li><li><b>6. Is the testing work or the EV work the one you actually want more of?</b></li></ul><div class="oppnote" style="margin-top:12px"><b>Question 1 unlocks everything else</b>, and ⭐ <b>question 4 is the one you probably cannot answer yet</b>, which is the whole argument for putting measurement on first.</div></div></section>
+
+<section class="cta"><div class="wrap"><h2>Twenty-four ways to ring you. Nothing counting who does.</h2><p>You said the EV flow feels like it is slowing. Nothing on your site can tell you whether it is.</p></div></section>
+
+<footer><div class="wrap">
+Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026, for discussion with Jonathon Fitzpatrick at F&amp;G Electrical Ltd.
+<b>This is a discussion document, not a proposal or a statement of work, and nothing on it is
+priced.</b>
+<b>&#9888; AG1 HAS NOT SPOKEN TO THIS BUSINESS. Everything under "What You Told Our Team" is as
+recorded by AG1's team from a booking call and is REPORTED, NOT VERIFIED. AG1 has seen no financial,
+accounting or employment record.</b>
+<b>&#9888; Website findings &mdash; seven enquiry forms, twenty-four tap-to-call links, twenty pages, the absence of any analytics or advertising tag, the absence of local business markup, the published Gmail address and mobile number, and the presence of a name@example.com placeholder &mdash; were established by automated read of fgelectricalltd.co.uk on 5 October 2026 and describe that site as it stood on that date. NICEIC is quoted from that website; AG1 has made no enquiry of NICEIC and has not verified that any registration is held or current.</b> <b>&#9888; Company details &mdash; F&amp;G ELECTRICAL LTD, company number NI694063, incorporated 29 January 2023 &mdash; are from the public Companies House record read on 5 October 2026. AG1 has examined no financial figure.</b>
+<b>&#9888; Any arithmetic shown is a multiplication of figures the prospect supplied, presented to
+show scale for discussion. It is NOT a forecast, projection or promise. AG1 does not know this
+business's turnover, margin, capacity or costs and predicts no outcome.</b>
+<b>&#9888; No enquiry volume, cost per enquiry, ranking position, conversion rate, number of jobs,
+number of applicants, hire or revenue outcome is forecast, promised or implied anywhere on this
+page.</b>
+<b>&#9888; AG1 IS NOT A RECRUITMENT AGENCY and gives no employment, HR, tax or legal advice.</b>
+</div></footer>
+</body></html>
